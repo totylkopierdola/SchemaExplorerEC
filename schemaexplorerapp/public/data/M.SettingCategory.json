@@ -1,0 +1,136 @@
+{
+  "id": 2,
+  "name": "M.SettingCategory",
+  "modified_on": "2021-03-16T09:43:33.2665208Z",
+  "created_on": "2018-11-29T13:36:09.3062723Z",
+  "display_template": "{M.SettingCategory.Name}",
+  "is_taxonomy_item_definition": false,
+  "is_path_enabled_definition": false,
+  "is_manual_sorting_allowed": false,
+  "is_system_owned": true,
+  "labels": {
+    "en-US": "Category"
+  },
+  "member_groups": [{
+    "name": "Main",
+    "labels": {
+      "en-US": "Main"
+    },
+    "members": [{
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": true,
+      "is_mandatory": true,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": true,
+      "boost": false,
+      "included_in_content": true,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "M.SettingCategory.Name",
+      "labels": {
+        "": "Name",
+        "en-US": "Name"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": true,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": true,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "M.SettingCategory.Label",
+      "labels": {
+        "": "Label",
+        "en-US": "Label"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "Relation",
+      "role": "Parent",
+      "cardinality": "OneToMany",
+      "associated_entitydefinition": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.Setting",
+        "title": "The associated entity definition for this relation."
+      },
+      "child_is_mandatory": false,
+      "parent_is_mandatory": true,
+      "inherits_security": true,
+      "allow_navigation": true,
+      "is_nested": true,
+      "is_taxonomy_relation": false,
+      "is_taxonomy_hierarchy_relation": false,
+      "content_is_copied": false,
+      "completion_is_copied": false,
+      "is_path_relation": false,
+      "is_path_hierarchy_relation": false,
+      "path_hierarchy_score": 0,
+      "is_rendition_relation": false,
+      "associated_labels": {
+        "": "Category",
+        "en-US": "Category"
+      },
+      "name": "SettingCategoryToSettings",
+      "labels": {
+        "": "Settings",
+        "en-US": "Settings"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }],
+    "is_system_owned": true,
+    "is_conditional": false,
+    "conditions": [],
+    "is_secured": false
+  }],
+  "entities": {
+    "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.SettingCategory/entities{?skip,take}",
+    "title": "The entities that belong to this entity definition",
+    "templated": true
+  },
+  "related_paths": {
+    "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.SettingCategory/relatedpaths",
+    "title": "The related paths for this entity definition",
+    "templated": true
+  },
+  "modified_by": {
+    "href": "https://dam4-training.sitecoresandbox.cloud/api/entities/6",
+    "title": "The user who last modified the entity definition"
+  },
+  "created_by": null,
+  "self": {
+    "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.SettingCategory",
+    "title": "This entity definition"
+  }
+}

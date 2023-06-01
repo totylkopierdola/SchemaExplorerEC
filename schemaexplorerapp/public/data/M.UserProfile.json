@@ -1,0 +1,574 @@
+{
+  "id": 3,
+  "name": "M.UserProfile",
+  "modified_on": "2022-10-14T12:49:54.5106649Z",
+  "created_on": "2018-11-29T13:36:11.4059105Z",
+  "display_template": "{Username}",
+  "is_taxonomy_item_definition": false,
+  "is_path_enabled_definition": false,
+  "is_manual_sorting_allowed": false,
+  "is_system_owned": false,
+  "labels": {
+    "en-US": "User profile"
+  },
+  "member_groups": [{
+    "name": "Project",
+    "labels": {
+      "en-US": "Resource management"
+    },
+    "members": [{
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "datasource": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/datasources/DailyHourCapacityStatus"
+      },
+      "name": "DailyHourCapacityStatus",
+      "labels": {
+        "en-US": "Daily capacity"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": true,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }],
+    "is_system_owned": true,
+    "is_conditional": false,
+    "conditions": [],
+    "is_secured": false
+  }, {
+    "name": "AdditionalData",
+    "labels": {
+      "en-US": "Additional data"
+    },
+    "members": [],
+    "is_system_owned": false,
+    "is_conditional": false,
+    "conditions": [],
+    "is_secured": false
+  }, {
+    "name": "System",
+    "labels": {
+      "en-US": "System"
+    },
+    "members": [{
+      "type": "Boolean",
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "HasPassword",
+      "labels": {
+        "en-US": "Has password"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": true,
+      "is_mandatory": true,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": true,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "Username",
+      "labels": {
+        "en-US": "Username"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": false
+    }, {
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": true,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "Email",
+      "labels": {
+        "en-US": "Email"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "DateTime",
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "LastWhatsNewVisualisationDateTime",
+      "labels": {
+        "en-US": "Last What's new pop up date time"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": false
+    }, {
+      "type": "Relation",
+      "role": "Child",
+      "cardinality": "OneToOne",
+      "associated_entitydefinition": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/User",
+        "title": "The associated entity definition for this relation."
+      },
+      "child_is_mandatory": false,
+      "parent_is_mandatory": false,
+      "inherits_security": false,
+      "allow_navigation": true,
+      "is_nested": false,
+      "is_taxonomy_relation": false,
+      "is_taxonomy_hierarchy_relation": false,
+      "content_is_copied": false,
+      "completion_is_copied": false,
+      "is_path_relation": false,
+      "is_path_hierarchy_relation": false,
+      "path_hierarchy_score": 0,
+      "is_rendition_relation": false,
+      "associated_labels": {
+        "en-US": "User profile"
+      },
+      "name": "UserToUserProfile",
+      "labels": {
+        "en-US": "User"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "UICulture",
+      "labels": {
+        "en-US": "UI Culture"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "Relation",
+      "role": "Parent",
+      "cardinality": "ManyToMany",
+      "associated_entitydefinition": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.Asset",
+        "title": "The associated entity definition for this relation."
+      },
+      "child_is_mandatory": false,
+      "parent_is_mandatory": false,
+      "inherits_security": false,
+      "allow_navigation": true,
+      "is_nested": false,
+      "is_taxonomy_relation": false,
+      "is_taxonomy_hierarchy_relation": false,
+      "content_is_copied": false,
+      "completion_is_copied": false,
+      "is_path_relation": false,
+      "is_path_hierarchy_relation": false,
+      "path_hierarchy_score": 0,
+      "is_rendition_relation": false,
+      "associated_labels": {
+        "en-US": "User profiles"
+      },
+      "name": "UserProfileToAvatar",
+      "labels": {
+        "en-US": "Avatars"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": true,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "Relation",
+      "role": "Parent",
+      "cardinality": "ManyToMany",
+      "associated_entitydefinition": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.Asset",
+        "title": "The associated entity definition for this relation."
+      },
+      "child_is_mandatory": false,
+      "parent_is_mandatory": false,
+      "inherits_security": false,
+      "allow_navigation": true,
+      "is_nested": false,
+      "is_taxonomy_relation": false,
+      "is_taxonomy_hierarchy_relation": false,
+      "content_is_copied": false,
+      "completion_is_copied": false,
+      "is_path_relation": false,
+      "is_path_hierarchy_relation": false,
+      "path_hierarchy_score": 0,
+      "is_rendition_relation": true,
+      "associated_labels": {
+        "en-US": "User profiles (master)"
+      },
+      "name": "UserProfileToMasterAvatar",
+      "labels": {
+        "en-US": "Master avatar"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": true,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "datasource": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/datasources/Locations"
+      },
+      "name": "Location",
+      "labels": {
+        "en-US": "Location"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "Relation",
+      "role": "Child",
+      "cardinality": "OneToMany",
+      "associated_entitydefinition": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.Portal.Theme",
+        "title": "The associated entity definition for this relation."
+      },
+      "child_is_mandatory": false,
+      "parent_is_mandatory": false,
+      "inherits_security": false,
+      "allow_navigation": true,
+      "is_nested": false,
+      "is_taxonomy_relation": false,
+      "is_taxonomy_hierarchy_relation": false,
+      "content_is_copied": false,
+      "completion_is_copied": false,
+      "is_path_relation": false,
+      "is_path_hierarchy_relation": false,
+      "path_hierarchy_score": 0,
+      "is_rendition_relation": false,
+      "associated_labels": {
+        "en-US": "User profiles"
+      },
+      "name": "ThemeToUserProfiles",
+      "labels": {
+        "en-US": "Theme"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "Relation",
+      "role": "Child",
+      "cardinality": "OneToMany",
+      "associated_entitydefinition": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/Portal.Page",
+        "title": "The associated entity definition for this relation."
+      },
+      "child_is_mandatory": false,
+      "parent_is_mandatory": false,
+      "inherits_security": false,
+      "allow_navigation": true,
+      "is_nested": false,
+      "is_taxonomy_relation": false,
+      "is_taxonomy_hierarchy_relation": false,
+      "content_is_copied": false,
+      "completion_is_copied": false,
+      "is_path_relation": false,
+      "is_path_hierarchy_relation": false,
+      "path_hierarchy_score": 0,
+      "is_rendition_relation": false,
+      "associated_labels": {
+        "en-US": "User profiles"
+      },
+      "name": "HomepageToUserProfile",
+      "labels": {
+        "en-US": "Homepage"
+      },
+      "helptext": {
+        "en-US": "If enabled, this page can be used as a homepage and linked to user groups"
+      },
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": true,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "Json",
+      "content_type": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": true,
+      "stored_in_graph": false,
+      "name": "CloudDriveSettings",
+      "labels": {
+        "en-US": "CloudDrive settings"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "datasource": {
+        "href": "https://dam4-training.sitecoresandbox.cloud/api/datasources/TimeZone"
+      },
+      "name": "TimeZone",
+      "labels": {
+        "en-US": "TimeZone"
+      },
+      "helptext": {
+        "en-US": "Assign a timezone to the userprofile"
+      },
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }],
+    "is_system_owned": true,
+    "is_conditional": false,
+    "conditions": [],
+    "is_secured": false
+  }, {
+    "name": "Extensions",
+    "labels": {
+      "en-US": "Extensions"
+    },
+    "members": [{
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "LastLoginProvider",
+      "labels": {
+        "en-US": "Last Login Provider "
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "FirstName",
+      "labels": {
+        "en-US": "First Name "
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }, {
+      "type": "String",
+      "content_type": "SingleLine",
+      "validation_expression": null,
+      "is_indexed": false,
+      "is_mandatory": false,
+      "is_multilanguage": false,
+      "is_multivalue": false,
+      "is_unique": false,
+      "boost": false,
+      "included_in_content": false,
+      "included_in_completion": false,
+      "ignore_on_export": false,
+      "stored_in_graph": false,
+      "name": "LastName",
+      "labels": {
+        "en-US": "Last Name"
+      },
+      "helptext": {},
+      "is_conditional": false,
+      "conditions": [],
+      "can_trigger_conditional_members": false,
+      "is_system_owned": false,
+      "is_secured": false,
+      "can_write": true,
+      "allow_updates": true
+    }],
+    "is_system_owned": false,
+    "is_conditional": false,
+    "conditions": [],
+    "is_secured": false
+  }],
+  "entities": {
+    "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.UserProfile/entities{?skip,take}",
+    "title": "The entities that belong to this entity definition",
+    "templated": true
+  },
+  "related_paths": {
+    "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.UserProfile/relatedpaths",
+    "title": "The related paths for this entity definition",
+    "templated": true
+  },
+  "modified_by": {
+    "href": "https://dam4-training.sitecoresandbox.cloud/api/entities/44456",
+    "title": "The user who last modified the entity definition"
+  },
+  "created_by": null,
+  "self": {
+    "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.UserProfile",
+    "title": "This entity definition"
+  }
+}

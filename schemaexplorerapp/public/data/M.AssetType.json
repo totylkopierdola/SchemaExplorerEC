@@ -1,0 +1,348 @@
+{
+  "id": 98,
+  "name": "M.AssetType",
+  "modified_on": "2022-11-15T09:20:05.9863662Z",
+  "created_on": "2018-11-29T13:40:04.7370463Z",
+  "display_template": "{Label}",
+  "is_taxonomy_item_definition": true,
+  "is_path_enabled_definition": true,
+  "is_manual_sorting_allowed": false,
+  "is_system_owned": false,
+  "labels": {
+  "en-US": "Asset type"
+  },
+  "member_groups": [
+  {
+  "name": "Main",
+  "labels": {
+  "en-US": "Main"
+  },
+  "members": [
+  {
+  "type": "String",
+  "content_type": "SingleLine",
+  "validation_expression": null,
+  "is_indexed": false,
+  "is_mandatory": true,
+  "is_multilanguage": true,
+  "is_multivalue": false,
+  "is_unique": false,
+  "boost": false,
+  "included_in_content": true,
+  "included_in_completion": true,
+  "ignore_on_export": false,
+  "stored_in_graph": false,
+  "conditional_validation_culture": "en-US",
+  "name": "Label",
+  "labels": {
+  "en-US": "Label"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": false,
+  "is_system_owned": false,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  },
+  {
+  "type": "Long",
+  "is_indexed": true,
+  "is_mandatory": false,
+  "is_multilanguage": false,
+  "is_multivalue": false,
+  "is_unique": false,
+  "boost": false,
+  "included_in_content": false,
+  "included_in_completion": false,
+  "ignore_on_export": false,
+  "stored_in_graph": false,
+  "name": "SortingIndex",
+  "labels": {
+  "en-US": "Sort index"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": false,
+  "is_system_owned": false,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  },
+  {
+  "type": "Relation",
+  "role": "Parent",
+  "cardinality": "OneToMany",
+  "associated_entitydefinition": {
+  "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.AssetType",
+  "title": "The associated entity definition for this relation."
+  },
+  "child_is_mandatory": false,
+  "parent_is_mandatory": false,
+  "inherits_security": true,
+  "allow_navigation": true,
+  "is_nested": false,
+  "is_taxonomy_relation": false,
+  "is_taxonomy_hierarchy_relation": true,
+  "content_is_copied": true,
+  "completion_is_copied": true,
+  "is_path_relation": false,
+  "is_path_hierarchy_relation": true,
+  "path_hierarchy_score": 0,
+  "is_rendition_relation": false,
+  "associated_labels": {
+  "en-US": "Self items"
+  },
+  "name": "AssetTypeToSelf",
+  "labels": {
+  "en-US": "Self items"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": false,
+  "is_system_owned": false,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  },
+  {
+  "type": "Relation",
+  "role": "Child",
+  "cardinality": "OneToMany",
+  "associated_entitydefinition": {
+  "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.AssetType",
+  "title": "The associated entity definition for this relation."
+  },
+  "child_is_mandatory": false,
+  "parent_is_mandatory": false,
+  "inherits_security": true,
+  "allow_navigation": true,
+  "is_nested": false,
+  "is_taxonomy_relation": false,
+  "is_taxonomy_hierarchy_relation": true,
+  "content_is_copied": true,
+  "completion_is_copied": true,
+  "is_path_relation": false,
+  "is_path_hierarchy_relation": true,
+  "path_hierarchy_score": 0,
+  "is_rendition_relation": false,
+  "associated_labels": {
+  "en-US": "Self items"
+  },
+  "name": "AssetTypeToSelf",
+  "labels": {
+  "en-US": "Self items"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": false,
+  "is_system_owned": false,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  },
+  {
+  "type": "Boolean",
+  "is_indexed": true,
+  "is_mandatory": false,
+  "is_multilanguage": false,
+  "is_multivalue": false,
+  "is_unique": false,
+  "boost": false,
+  "included_in_content": false,
+  "included_in_completion": false,
+  "ignore_on_export": false,
+  "stored_in_graph": false,
+  "name": "TriggersVision",
+  "labels": {
+  "en-US": "Triggers Vision"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": true,
+  "is_system_owned": false,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  },
+  {
+  "type": "Boolean",
+  "is_indexed": true,
+  "is_mandatory": false,
+  "is_multilanguage": false,
+  "is_multivalue": false,
+  "is_unique": false,
+  "boost": false,
+  "included_in_content": false,
+  "included_in_completion": false,
+  "ignore_on_export": false,
+  "stored_in_graph": false,
+  "name": "TriggersExtractArchives",
+  "labels": {
+  "en-US": "Triggers extract archives"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": false,
+  "is_system_owned": false,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  },
+  {
+  "type": "Boolean",
+  "is_indexed": true,
+  "is_mandatory": false,
+  "is_multilanguage": false,
+  "is_multivalue": false,
+  "is_unique": false,
+  "boost": false,
+  "included_in_content": false,
+  "included_in_completion": false,
+  "ignore_on_export": false,
+  "stored_in_graph": false,
+  "name": "TriggersVideoAI",
+  "labels": {
+  "en-US": "Triggers video AI"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": false,
+  "is_system_owned": false,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  }
+  ],
+  "is_system_owned": true,
+  "is_conditional": false,
+  "conditions": [],
+  "is_secured": false
+  },
+  {
+  "name": "Content",
+  "labels": {
+  "en-US": "Content"
+  },
+  "members": [
+  {
+  "type": "Relation",
+  "role": "Parent",
+  "cardinality": "OneToMany",
+  "associated_entitydefinition": {
+  "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.Asset",
+  "title": "The associated entity definition for this relation."
+  },
+  "child_is_mandatory": false,
+  "parent_is_mandatory": false,
+  "inherits_security": true,
+  "allow_navigation": false,
+  "is_nested": false,
+  "is_taxonomy_relation": true,
+  "is_taxonomy_hierarchy_relation": false,
+  "content_is_copied": true,
+  "completion_is_copied": true,
+  "is_path_relation": true,
+  "is_path_hierarchy_relation": false,
+  "path_hierarchy_score": 0,
+  "is_rendition_relation": false,
+  "associated_labels": {
+  "en-US": "Type"
+  },
+  "name": "AssetTypeToAsset",
+  "labels": {
+  "en-US": "Assets"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": false,
+  "is_system_owned": false,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  }
+  ],
+  "is_system_owned": true,
+  "is_conditional": false,
+  "conditions": [],
+  "is_secured": false
+  },
+  {
+  "name": "Visualization",
+  "labels": {
+  "en-US": "Visualization"
+  },
+  "members": [
+  {
+  "type": "Json",
+  "content_type": null,
+  "is_indexed": false,
+  "is_mandatory": false,
+  "is_multilanguage": false,
+  "is_multivalue": false,
+  "is_unique": false,
+  "boost": false,
+  "included_in_content": false,
+  "included_in_completion": false,
+  "ignore_on_export": true,
+  "stored_in_graph": false,
+  "name": "Entity.Visualization",
+  "labels": {
+  "en-US": "Visualization"
+  },
+  "helptext": {},
+  "is_conditional": false,
+  "conditions": [],
+  "can_trigger_conditional_members": false,
+  "is_system_owned": true,
+  "is_secured": false,
+  "can_write": true,
+  "allow_updates": true
+  }
+  ],
+  "is_system_owned": true,
+  "is_conditional": false,
+  "conditions": [],
+  "is_secured": false
+  },
+  {
+  "name": "Cognitive",
+  "labels": {},
+  "members": [],
+  "is_system_owned": true,
+  "is_conditional": false,
+  "conditions": [],
+  "is_secured": false
+  }
+  ],
+  "entities": {
+  "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.AssetType/entities{?skip,take}",
+  "title": "The entities that belong to this entity definition",
+  "templated": true
+  },
+  "related_paths": {
+  "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.AssetType/relatedpaths",
+  "title": "The related paths for this entity definition",
+  "templated": true
+  },
+  "modified_by": {
+  "href": "https://dam4-training.sitecoresandbox.cloud/api/entities/44456",
+  "title": "The user who last modified the entity definition"
+  },
+  "created_by": {
+  "href": "https://dam4-training.sitecoresandbox.cloud/api/entities/6",
+  "title": "The user who created the entity definition"
+  },
+  "self": {
+  "href": "https://dam4-training.sitecoresandbox.cloud/api/entitydefinitions/M.AssetType",
+  "title": "This entity definition"
+  }
+  }
